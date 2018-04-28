@@ -2,15 +2,15 @@
   <div class="wox-order-canlendar">
     <div class="month">
       <Swiper ref="swiper" v-if="calendarData.months && calendarData.months.length" :autoPlay="false" :showIndicator="false" @transtionend="handleChange">
-        <swiper-slide
+        <Slide
           v-for="(item, index) in calendarData.months || []"
           :key="index"
         >
           {{ item.split('-')[0] }}年{{ item.split('-')[1] }}月
-        </swiper-slide>
+        </Slide>
       </Swiper>
-      <div class="prev" slot="button-prev"></div>
-      <div class="next" slot="button-next"></div>
+      <div class="prev" @click="() => this.$refs.swiper.prevSlide()"></div>
+      <div class="next" @click="() => this.$refs.swiper.nextSlide()"></div>
     </div>
     <ul class="weeks">
       <li>日</li>
@@ -91,8 +91,7 @@ export default {
     Swiper, Slide
   },
   methods: {
-    handleChange() {
-      const index = this.$refs.mySwiper.swiper.activeIndex;
+    handleChange( index ) {
       const { months } = this.calendarData;
       this.monthChange( months[index] );
     },
