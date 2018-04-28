@@ -1,6 +1,6 @@
 {
   "name": "wox-vue-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "wox vue calendar",
   "main": "dist/index.js",
   "scripts": {
