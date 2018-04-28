@@ -1,16 +1,16 @@
 <template>
   <div class="wox-order-canlendar">
     <div class="month">
-      <swiper ref="mySwiper" :options="swiperOption" @slideChange="handleChange">
-        <swiper-slide
+      <Swiper ref="swiper" v-if="calendarData.months && calendarData.months.length" :autoPlay="false" :showIndicator="false" @transtionend="handleChange">
+        <Slide
           v-for="(item, index) in calendarData.months || []"
           :key="index"
         >
           {{ item.split('-')[0] }}年{{ item.split('-')[1] }}月
-        </swiper-slide>
-        <div class="prev" slot="button-prev"></div>
-        <div class="next" slot="button-next"></div>
-      </swiper>
+        </Slide>
+      </Swiper>
+      <div class="prev" @click="() => this.$refs.swiper.prevSlide()"></div>
+      <div class="next" @click="() => this.$refs.swiper.nextSlide()"></div>
     </div>
     <ul class="weeks">
       <li>日</li>
@@ -51,21 +51,10 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
-import 'swiper/dist/css/swiper.css';
+import { Swiper, Slide } from 'vue-swiper-component';
 
 export default {
   name: 'Calendar',
-  data() {
-    return {
-      swiperOption: {
-        navigation: {
-          nextEl: '.next',
-          prevEl: '.prev'
-        }
-      },
-    }
-  },
   computed: {
     nowMonth() {
       const defaultMonth = `${new Date().getFullYear()}-${this.fromatNum(new Date().getMonth() + 1)}`;
@@ -89,11 +78,10 @@ export default {
     }
   },
   components: {
-    swiper, swiperSlide
+    Swiper, Slide
   },
   methods: {
-    handleChange() {
-      const index = this.$refs.mySwiper.swiper.activeIndex;
+    handleChange( index ) {
       const { months } = this.calendarData;
       this.monthChange( months[index] );
     },
