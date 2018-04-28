@@ -55,16 +55,6 @@ import { Swiper, Slide } from 'vue-swiper-component';
 
 export default {
   name: 'Calendar',
-  data() {
-    return {
-      swiperOption: {
-        navigation: {
-          nextEl: '.next',
-          prevEl: '.prev'
-        }
-      },
-    }
-  },
   computed: {
     nowMonth() {
       const defaultMonth = `${new Date().getFullYear()}-${this.fromatNum(new Date().getMonth() + 1)}`;
