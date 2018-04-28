@@ -14,7 +14,7 @@ module.exports = {
     app: ['./demo/main.js']
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './lib'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -59,8 +59,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [
-          resolve('src'), 
-          resolve('test'), 
+          resolve('src'),
+          resolve('test'),
           resolve('node_modules/webpack-dev-server/client')
         ]
       },
