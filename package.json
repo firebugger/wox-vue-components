@@ -1,5 +1,6 @@
 {
-	"script": {
+	"name": "wox-vue-components",
+	"scripts": {
 		"build": "lerna run build",
 		"install": "lerna bootstrap",
 		"updated": "lerna updated",
