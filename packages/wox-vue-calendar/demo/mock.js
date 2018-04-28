@@ -1,0 +1,65 @@
+const calendarData = {
+  monthData: {
+    "month":"2018-05",
+    "dates":[
+      {"date":"2018-05-01","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-02","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-03","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-04","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-05","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-06","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-07","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-08","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-09","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-10","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-11","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-12","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-13","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-14","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-15","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-16","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-17","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-18","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-19","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-20","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-21","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-22","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-23","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-24","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-25","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-26","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-27","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-28","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-29","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-30","itemId":40634,"type":0,"stock":null,"sellOut":false},
+      {"date":"2018-05-31","itemId":40634,"type":0,"stock":null,"sellOut":false}
+    ],
+    "items":{
+      "40634":{
+        "itemId":40634,
+        "priority":100,
+        "limit":{
+          "maxAd":2,
+          "maxChild":1,
+          "maxHead":3,
+          "minHead":1
+        },
+        "pf":0,
+        "rooms":{
+          "three_person":-1,
+          "child":11833.66,
+          "pf":-1,"four_person":-1,"one_person":15993.92,"two_person":11833.66
+        },
+        "baseRooms":{"three_person":-1,"child":9861.38,"pf":-1,"four_person":-1,"one_person":13328.27,"two_person":9861.38},
+        "startPrice":11833,"basePrice":9861,"actualAmount":11833.66,"currency":"CNY"
+      }
+    },
+    "productTemplate":2,
+    "sellOut":false,
+    "endDate":"2018-05-31",
+    "startDate":"2018-05-01"
+  },
+  months: ["2018-04", "2018-05", "2018-06", "2018-07", "2018-08", "2018-09", "2018-10", "2018-11", "2018-12"]
+}
+
+export default calendarData;
