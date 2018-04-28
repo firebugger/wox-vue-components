@@ -8,7 +8,7 @@ module.exports = {
     'index': path.join(__dirname, 'src/index.vue')
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'lib'),
     publicPath: '/',
     library: pkg.name,
     libraryTarget: 'umd',

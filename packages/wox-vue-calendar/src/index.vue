@@ -1,16 +1,16 @@
 <template>
   <div class="wox-order-canlendar">
     <div class="month">
-      <swiper ref="mySwiper" :options="swiperOption" @slideChange="handleChange">
+      <Swiper ref="swiper" v-if="calendarData.months && calendarData.months.length" :autoPlay="false" :showIndicator="false" @transtionend="handleChange">
         <swiper-slide
           v-for="(item, index) in calendarData.months || []"
           :key="index"
         >
           {{ item.split('-')[0] }}年{{ item.split('-')[1] }}月
         </swiper-slide>
-        <div class="prev" slot="button-prev"></div>
-        <div class="next" slot="button-next"></div>
-      </swiper>
+      </Swiper>
+      <div class="prev" slot="button-prev"></div>
+      <div class="next" slot="button-next"></div>
     </div>
     <ul class="weeks">
       <li>日</li>
@@ -51,8 +51,7 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
-import 'swiper/dist/css/swiper.css';
+import { Swiper, Slide } from 'vue-swiper-component';
 
 export default {
   name: 'Calendar',
@@ -89,7 +88,7 @@ export default {
     }
   },
   components: {
-    swiper, swiperSlide
+    Swiper, Slide
   },
   methods: {
     handleChange() {
