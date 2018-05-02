@@ -2,6 +2,20 @@
 
 我行 Vue 组件库
 
+## Initialize
+
+* 获取仓库代码
+
+```
+$ git clone git@github.com:firebugger/wox-vue-components.git
+```
+
+* 安装依赖
+
+```
+$ npm install
+```
+
 ## Usage
 
 * 安装 `packages` 依赖
