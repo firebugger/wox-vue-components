@@ -66,4 +66,4 @@ export default {
     window.addEventListener('scroll', this.throttle());
   }
 }
-</script>
+</script> 
